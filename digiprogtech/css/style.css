@@ -41,6 +41,10 @@ a:focus {
   color: #fff;
 }
 
+.back-acceuil-2 {
+  background-image: url("/images/planete.jpg");
+}
+
 .back-acceuil-1 {
   background-image: url("/images/oeil.jpg");
 }
@@ -943,6 +947,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .progress-wrap h3 {
+  color: #fff;
   font-size: 16px;
   font-family: "Quicksand", Arial, sans-serif;
   margin-bottom: 10px;
@@ -1693,7 +1698,7 @@ body.offcanvas .colorlib-nav-toggle {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 30px;
   height: 2px;
   color: #000;
@@ -1835,4 +1840,12 @@ body.offcanvas .colorlib-nav-toggle {
 
 .js .animate-box {
   opacity: 0;
+}
+
+.p {
+  color: #fff;
+}
+.p-contact {
+  line-height: 0;
+  color: #2c98f0;
 }
