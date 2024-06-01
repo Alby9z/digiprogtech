@@ -749,6 +749,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .timeline-centered .timeline-entry .timeline-entry-inner .timeline-label {
+  border-radius: 5px;
   position: relative;
   background: #f2f3f7;
   padding: 1.5em;
@@ -1205,6 +1206,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .project {
+  border-radius: 15px;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -1215,6 +1217,7 @@ body.offcanvas .colorlib-nav-toggle {
   margin-bottom: 30px;
 }
 .project .desc {
+  border-radius: 15px;
   position: absolute;
   top: 0;
   bottom: 0;
