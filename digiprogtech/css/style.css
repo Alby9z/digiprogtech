@@ -42,11 +42,11 @@ a:focus {
 }
 
 .back-acceuil-2 {
-  background-image: url("/images/planete.jpg");
+  background-image: url("/digiprogtech/images/planete.jpg");
 }
 
 .back-acceuil-1 {
-  background-image: url("/images/oeil.jpg");
+  background-image: url("/digiprogtech/images/oeil.jpg");
 }
 
 #h1-aceuil {
@@ -54,6 +54,8 @@ a:focus {
 }
 
 p {
+  font-weight: 500;
+  line-height: 20px;
   color: #333;
   margin-bottom: 1.5em;
 }
@@ -422,9 +424,6 @@ figure figcaption {
 #colorlib-hero .flexslider .slider-text > .slider-text-inner s .colorlib-lead {
   font-size: 20px;
   color: #fff;
-}
-#colorlib-hero .flexslider .slider-text > .slider-text-inner p {
-  margin-bottom: 0;
 }
 #colorlib-hero .flexslider .slider-text > .slider-text-inner .btn {
   font-size: 12px;
@@ -1221,12 +1220,18 @@ body.offcanvas .colorlib-nav-toggle {
   bottom: 0;
   left: 0;
   right: 0;
-  background: #2c98f0;
+  background: #46535e;
   opacity: 0;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
+
+.project:hover .desc {
+  opacity: 0.9;
+  background: rgba(70, 83, 94, 0.9);
+}
+
 .project .desc .con {
   padding: 20px;
   display: block;
@@ -1397,7 +1402,7 @@ body.offcanvas .colorlib-nav-toggle {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .colorlib-social li a {
   font-size: 22px;
@@ -1406,7 +1411,7 @@ body.offcanvas .colorlib-nav-toggle {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-border-radius: 7px;
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
@@ -1857,4 +1862,20 @@ body.offcanvas .colorlib-nav-toggle {
 .p-contact {
   line-height: 0;
   color: #2c98f0;
+}
+
+#text-acceuil {
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  justify-content: left;
+  margin: 50px 0px -70px -30px;
+}
+
+#text-acceuil-1 {
+  color: #fff;
+  display: flex;
+  font-size: 20px;
+  justify-content: left;
+  margin: 55px 0px -135px -25px;
 }

@@ -1,17 +1,18 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?6py85u');
-  src:  url('fonts/icomoon.eot?6py85u#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?6py85u') format('truetype'),
-    url('fonts/icomoon.woff?6py85u') format('woff'),
-    url('fonts/icomoon.svg?6py85u#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("fonts/icomoon.eot?6py85u");
+  src: url("fonts/icomoon.eot?6py85u#iefix") format("embedded-opentype"),
+    url("fonts/icomoon.ttf?6py85u") format("truetype"),
+    url("fonts/icomoon.woff?6py85u") format("woff"),
+    url("fonts/icomoon.svg?6py85u#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -295,6 +296,7 @@
   content: "\e989";
 }
 .icon-phone:before {
+  color: #15334c;
   content: "\e98a";
 }
 .icon-microphone2:before {
@@ -535,6 +537,7 @@
   content: "\e9db";
 }
 .icon-map:before {
+  color: #15334c;
   content: "\e9dc";
 }
 .icon-key-outline:before {
@@ -544,6 +547,7 @@
   content: "\e9de";
 }
 .icon-globe-outline:before {
+  color: #15334c;
   content: "\e9df";
 }
 .icon-eye-outline:before {
@@ -1788,4 +1792,3 @@
 .icon-IcoMoon:before {
   content: "\eb1a";
 }
-
