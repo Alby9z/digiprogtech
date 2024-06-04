@@ -1530,6 +1530,7 @@ body.offcanvas .colorlib-nav-toggle {
 }
 
 .btn-primary {
+  border-radius: 10px;
   background: #2c98f0;
   color: #fff;
   border: 2px solid #2c98f0;
@@ -1732,7 +1733,7 @@ body.offcanvas .colorlib-nav-toggle {
   content: "";
   width: 30px;
   height: 2px;
-  background: #000;
+  background: #f7f7f7;
   position: absolute;
   left: 0;
   -webkit-transition: 0.2s;
