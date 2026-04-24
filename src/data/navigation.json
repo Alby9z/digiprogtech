@@ -1,0 +1,63 @@
+{
+  "logo": "Digiprogtech",
+  "mainLinks": [
+    { "label": "Accueil", "href": "/" },
+    { "label": "Qui sommes-nous", "href": "/qui-sommes-nous" },
+    {
+      "label": "Services",
+      "href": "/services",
+      "submenu": [
+        {
+          "category": "Développement Web",
+          "icon": "Code2",
+          "items": [
+            { "label": "Développement Web", "href": "/services/developpement-web", "desc": "Vue d'ensemble" },
+            { "label": "Site Statique (Vitrine)", "href": "/services/site-statique", "desc": "Rapide, sécurisé, impactant" },
+            { "label": "Site Dynamique", "href": "/services/site-dynamique", "desc": "Applications web sur mesure" },
+            { "label": "Refonte de site", "href": "/services/refonte", "desc": "Modernisez votre présence" },
+            { "label": "Optimisation performance", "href": "/services/optimisation", "desc": "Vitesse & Core Web Vitals" }
+          ]
+        },
+        {
+          "category": "Design & Graphisme",
+          "icon": "Palette",
+          "items": [
+            { "label": "Design & Graphisme", "href": "/services/design-graphisme", "desc": "Vue d'ensemble" },
+            { "label": "Création de Logo", "href": "/services/logo", "desc": "Identité visuelle forte" },
+            { "label": "UI/UX Design", "href": "/services/ui-ux", "desc": "Expériences mémorables" },
+            { "label": "Maquettes & Prototypes", "href": "/services/maquettes", "desc": "Figma & wireframes" },
+            { "label": "Charte Graphique", "href": "/services/charte-graphique", "desc": "Cohérence visuelle" }
+          ]
+        },
+        {
+          "category": "Hébergement & Cloud",
+          "icon": "Server",
+          "items": [
+            { "label": "Hébergement Web", "href": "/services/hebergement", "desc": "Infrastructure fiable" },
+            { "label": "Cloud & Scalabilité", "href": "/services/cloud", "desc": "AWS, Vercel, OVH" },
+            { "label": "Déploiement Serveur", "href": "/services/deploiement", "desc": "CI/CD & DevOps" },
+            { "label": "Maintenance Technique", "href": "/services/maintenance", "desc": "Suivi & mises à jour" }
+          ]
+        },
+        {
+          "category": "Sécurité Web",
+          "icon": "Shield",
+          "items": [
+            { "label": "Sécurité Web", "href": "/services/securite", "desc": "Vue d'ensemble" },
+            { "label": "Certificat SSL", "href": "/services/ssl", "desc": "HTTPS & chiffrement" },
+            { "label": "Protection Anti-Attaques", "href": "/services/protection", "desc": "Pare-feu & monitoring" },
+            { "label": "Anti-Spam / Anti-Bot", "href": "/services/anti-spam", "desc": "Captcha & filtres" },
+            { "label": "Sauvegardes", "href": "/services/sauvegardes", "desc": "Backup automatisé" }
+          ]
+        }
+      ]
+    },
+    { "label": "Audit", "href": "/audit" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact", "href": "/contact" }
+  ],
+  "ctaLinks": [
+    { "label": "Demander un audit", "href": "/audit", "variant": "outline" },
+    { "label": "Devis gratuit", "href": "/devis", "variant": "primary" }
+  ]
+}

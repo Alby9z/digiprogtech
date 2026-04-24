@@ -1,0 +1,62 @@
+[
+  {
+    "slug": "pourquoi-site-web-indispensable-2024",
+    "title": "Pourquoi un site web est indispensable pour votre business en 2024",
+    "excerpt": "Dans un monde où 97% des consommateurs recherchent des entreprises en ligne, ne pas avoir de site web optimisé, c'est laisser des opportunités à vos concurrents.",
+    "category": "Stratégie Digitale",
+    "date": "2024-03-15",
+    "readTime": "5 min",
+    "image": "/blog/site-web-2024.jpg",
+    "content": "Contenu complet de l'article..."
+  },
+  {
+    "slug": "core-web-vitals-guide-complet",
+    "title": "Core Web Vitals : Le guide complet pour optimiser votre site",
+    "excerpt": "Google utilise les Core Web Vitals comme facteur de classement. Découvrez comment optimiser LCP, FID et CLS pour booster votre référencement.",
+    "category": "Performance",
+    "date": "2024-03-08",
+    "readTime": "8 min",
+    "image": "/blog/core-web-vitals.jpg",
+    "content": "Contenu complet de l'article..."
+  },
+  {
+    "slug": "securite-web-les-essentiels",
+    "title": "Sécurité Web : Les 7 essentiels que tout site doit avoir",
+    "excerpt": "SSL, protection DDoS, sauvegardes automatiques… Voici les protections incontournables pour sécuriser votre présence en ligne.",
+    "category": "Sécurité",
+    "date": "2024-02-28",
+    "readTime": "6 min",
+    "image": "/blog/securite-web.jpg",
+    "content": "Contenu complet de l'article..."
+  },
+  {
+    "slug": "site-statique-vs-dynamique",
+    "title": "Site Statique vs Dynamique : Lequel choisir pour votre projet ?",
+    "excerpt": "Next.js, Gatsby, ou une app full-stack ? On vous explique les différences, avantages et cas d'usage pour faire le bon choix.",
+    "category": "Développement",
+    "date": "2024-02-20",
+    "readTime": "7 min",
+    "image": "/blog/static-vs-dynamic.jpg",
+    "content": "Contenu complet de l'article..."
+  },
+  {
+    "slug": "ui-ux-design-conversion",
+    "title": "UI/UX Design : Comment le design impacte vos conversions",
+    "excerpt": "Un bon design ne sert pas qu'à être beau. Découvrez comment l'UX peut augmenter votre taux de conversion de 200%.",
+    "category": "Design",
+    "date": "2024-02-12",
+    "readTime": "5 min",
+    "image": "/blog/ux-conversion.jpg",
+    "content": "Contenu complet de l'article..."
+  },
+  {
+    "slug": "seo-local-guide-pratique",
+    "title": "SEO Local : Le guide pratique pour dominer votre marché local",
+    "excerpt": "Google Business Profile, mots-clés géolocalisés, citations locales… Tout ce qu'il faut pour apparaître en tête des recherches locales.",
+    "category": "SEO",
+    "date": "2024-02-05",
+    "readTime": "9 min",
+    "image": "/blog/seo-local.jpg",
+    "content": "Contenu complet de l'article..."
+  }
+]
