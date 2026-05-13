@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import PageHero from '@/components/ui/PageHero'
 import SectionTitle from '@/components/ui/SectionTitle'
-export const metadata: Metadata = { title: 'Cloud & Scalabilité — AWS Vercel OVH', description: 'Infrastructure cloud qui s'adapte à votre croissance. De 100 à 1 million de visiteurs, vos serveurs suivent automatiquement.' }
+export const metadata: Metadata = { title: 'Cloud & Scalabilité — AWS Vercel OVH', description: "Infrastructure cloud qui s'adapte à votre croissance. De 100 à 1 million de visiteurs, vos serveurs suivent automatiquement." }
 const items = ['Auto-scaling intelligent','Multi-région disponible','Vercel / AWS / OVH','Base de données managée','Redis & CDN','Déploiement zéro downtime','Monitoring & alertes','Coûts optimisés']
 export default function Page() {
   return (<>
