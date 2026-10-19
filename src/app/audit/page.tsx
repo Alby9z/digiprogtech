@@ -32,7 +32,7 @@ export default function AuditPage() {
         badge="🔍 Audit de Site Web"
         title="Analysez, corrigez,"
         highlight="performez"
-        description="Recevez un rapport complet de 20-40 pages sur l'état de votre site : SEO, performance, sécurité et UX. Avec un plan d'action priorisé pour des résultats immédiats."
+        description="Recevez un rapport complet de 15-20 pages sur l'état de votre site : SEO, performance, sécurité et UX. Avec un plan d'action priorisé pour des résultats immédiats."
       >
         <div className="flex flex-wrap gap-4 justify-center">
           <a href="#formulaire-audit" className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl shadow-lg shadow-brand-500/30 hover:scale-[1.02] transition-all">
@@ -84,12 +84,23 @@ export default function AuditPage() {
             <div className="glass rounded-2xl border border-white/10 p-8">
               <h3 className="font-display font-semibold text-white mb-2">Impact des corrections</h3>
               <p className="text-sm text-slate-400 mb-6">Résultats moyens constatés après mise en œuvre des recommandations :</p>
-              {[['Trafic organique Google','+85%'],['Taux de conversion','+140%'],['Vitesse de chargement','×3 plus rapide'],['Taux de rebond','-45%'],['Score sécurité','A+ (vs D avant)']].map(([k,v]) => (
-                <div key={k} className="flex items-center justify-between py-3 border-b border-white/5 last:border-0">
-                  <span className="text-sm text-slate-400">{k}</span>
-                  <span className="font-display font-bold text-brand-400">{v}</span>
-                </div>
-              ))}
+              {[
+  ['Trafic organique Google', 'Suivi des clics et impressions'],
+  ['Référencement naturel', 'Analyse des positions Google'],
+  ['Vitesse de chargement', 'Lighthouse & Core Web Vitals'],
+  ['Expérience utilisateur', 'Analyse des points de friction'],
+  ['Sécurité du site', 'Contrôles et recommandations'],
+].map(([k, v]) => (
+  <div
+    key={k}
+    className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 py-4 border-b border-white/5 last:border-0"
+  >
+    <span className="text-sm text-slate-400">{k}</span>
+    <span className="text-sm font-semibold text-brand-400 sm:text-right">
+      {v}
+    </span>
+  </div>
+))}
             </div>
           </div>
         </div>

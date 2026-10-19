@@ -1,115 +1,226 @@
 import Link from 'next/link'
-import { Mail, Phone, MapPin, Twitter, Linkedin, Github, ArrowRight } from 'lucide-react'
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Instagram,
+  Linkedin,
+  Github,
+  ArrowRight,
+} from 'lucide-react'
+import Image from 'next/image'
+
+const developmentLinks = [
+  ['Site Statique', '/services/site-statique'],
+  ['Site Dynamique', '/services/site-dynamique'],
+  ['Refonte de site', '/services/refonte'],
+  ['Optimisation', '/services/optimisation'],
+]
+
+const designLinks = [
+  ['Logo & Identité', '/services/logo'],
+  ['UI/UX Design', '/services/ui-ux'],
+  ['Maquettes', '/services/maquettes'],
+  ['Hébergement', '/services/hebergement'],
+  ['Cloud', '/services/cloud'],
+]
+
+const companyLinks = [
+  ['Qui sommes-nous', '/qui-sommes-nous'],
+  ['Réalisations', '/realisations'],
+  ['Tarifs', '/tarifs'],
+  ['Devis gratuit', '/devis'],
+  ['Blog', '/blog'],
+  ['Contact', '/contact'],
+  ['Mentions légales', '/mentions-legales'],
+  ['Confidentialité', '/politique-confidentialite'],
+]
+
+const socialLinks = [
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/digiprogtech/',
+    Icon: Instagram,
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/brian-martin-8707a3444/',
+    Icon: Linkedin,
+  },
+  {
+    label: 'GitHub',
+    href: 'https://github.com/',
+    Icon: Github,
+  },
+]
+
+function FooterLinkList({
+  links,
+}: {
+  links: string[][]
+}) {
+  return (
+    <ul className="space-y-2">
+      {links.map(([label, href]) => (
+        <li key={href}>
+          <Link
+            href={href}
+            className="group flex items-center gap-1 text-sm text-slate-400 transition-colors hover:text-white"
+          >
+            <ArrowRight
+              size={10}
+              aria-hidden="true"
+              className="text-brand-400 opacity-0 transition-opacity group-hover:opacity-100"
+            />
+            {label}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  )
+}
 
 export default function Footer() {
   return (
-    <footer className="bg-dark-800 border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Main footer */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
-          {/* Brand */}
+    <footer className="border-t border-white/5 bg-dark-800">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        {/* Contenu principal */}
+        <div className="grid grid-cols-1 gap-10 py-16 md:grid-cols-2 lg:grid-cols-5">
+          {/* Identité et coordonnées */}
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center text-white font-display font-bold text-sm">D</div>
-              <span className="font-display font-bold text-xl text-white">Digiprog<span className="text-brand-400">tech</span></span>
-            </Link>
-            <p className="text-slate-400 text-sm leading-relaxed max-w-xs mb-6">
-              Expert digital global — développement web sur mesure, design impactant, audit & optimisation, sécurité avancée.
-            </p>
-            <div className="space-y-2">
-              <a href="mailto:contact@digiprogtech.fr" className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-                <Mail size={14} className="text-brand-400" /> contact@digiprogtech.fr
-              </a>
-              <a href="tel:+33123456789" className="flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors">
-                <Phone size={14} className="text-brand-400" /> +33 1 23 45 67 89
-              </a>
-              <span className="flex items-center gap-2 text-sm text-slate-400">
-                <MapPin size={14} className="text-brand-400" /> France — Intervention nationale & internationale
+            <Link
+              href="/"
+              aria-label="Digiprogtech — Accueil"
+              className="mb-4 flex items-center gap-2"
+            >
+              <div className="relative h-12 w-12 shrink-0">
+              <Image
+                src="/images/realisation/logo.png"
+                alt="Logo Digiprogtech"
+                width={48}
+                height={48}
+                className="h-full w-full object-contain"
+                />
+               </div>
+              <span className="font-display text-xl font-bold text-white">
+                Digiprog
+                <span className="text-brand-400">tech</span>
               </span>
+            </Link>
+
+            <p className="mb-6 max-w-xs text-sm leading-relaxed text-slate-400">
+              Expert digital global — développement web sur mesure, design
+              impactant, audit et optimisation, sécurité avancée.
+            </p>
+
+            <div className="space-y-3">
+              <a
+                href="mailto:digiprogtech@gmail.com"
+                className="flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
+              >
+                <Mail
+                  size={16}
+                  aria-hidden="true"
+                  className="shrink-0 text-brand-400"
+                />
+                digiprogtech@gmail.com
+              </a>
+
+              <a
+                href="tel:+33658951441"
+                className="flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-white"
+              >
+                <Phone
+                  size={16}
+                  aria-hidden="true"
+                  className="shrink-0 text-brand-400"
+                />
+                06 58 95 14 41
+              </a>
+
+              <div className="flex items-start gap-2 text-sm text-slate-400">
+                <MapPin
+                  size={16}
+                  aria-hidden="true"
+                  className="mt-0.5 shrink-0 text-brand-400"
+                />
+                <span>France — Intervention nationale et internationale</span>
+              </div>
             </div>
-            <div className="flex items-center gap-3 mt-6">
-              {[Twitter, Linkedin, Github].map((Icon, i) => (
-                <a key={i} href="#" className="w-9 h-9 rounded-lg bg-white/5 hover:bg-brand-500/20 border border-white/10 hover:border-brand-500/30 flex items-center justify-center text-slate-400 hover:text-brand-400 transition-all">
-                  <Icon size={14} />
+
+            {/* Réseaux sociaux */}
+            <div className="mt-6 flex items-center gap-3">
+              {socialLinks.map(({ label, href, Icon }) => (
+                <a
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={`Visiter le profil ${label} de Digiprogtech`}
+                  title={label}
+                  className="flex h-11 w-11 items-center justify-center rounded-lg border border-white/10 bg-white/5 text-slate-400 transition-all hover:border-brand-500/30 hover:bg-brand-500/20 hover:text-brand-400"
+                >
+                  <Icon size={17} aria-hidden="true" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Services Dev */}
+          {/* Développement */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Développement</h3>
-            <ul className="space-y-2">
-              {[
-                ['Site Statique', '/services/site-statique'],
-                ['Site Dynamique', '/services/site-dynamique'],
-                ['Refonte de site', '/services/refonte'],
-                ['Optimisation', '/services/optimisation'],
-              ].map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href} className="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1 group">
-                    <ArrowRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity text-brand-400" />
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h3 className="mb-4 text-sm font-semibold text-white">
+              Développement
+            </h3>
+
+            <FooterLinkList links={developmentLinks} />
           </div>
 
-          {/* Services Design */}
+          {/* Design et Cloud */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Design & Cloud</h3>
-            <ul className="space-y-2">
-              {[
-                ['Logo & Identité', '/services/logo'],
-                ['UI/UX Design', '/services/ui-ux'],
-                ['Maquettes', '/services/maquettes'],
-                ['Hébergement', '/services/hebergement'],
-                ['Cloud', '/services/cloud'],
-              ].map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href} className="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1 group">
-                    <ArrowRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity text-brand-400" />
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h3 className="mb-4 text-sm font-semibold text-white">
+              Design & Cloud
+            </h3>
+
+            <FooterLinkList links={designLinks} />
           </div>
 
-          {/* Company */}
+          {/* Entreprise */}
           <div>
-            <h3 className="text-white font-semibold text-sm mb-4">Entreprise</h3>
-            <ul className="space-y-2">
-              {[
-                ['Qui sommes-nous', '/qui-sommes-nous'],
-                ['Audit de site', '/audit'],
-                ['Devis gratuit', '/devis'],
-                ['Blog', '/blog'],
-                ['Contact', '/contact'],
-                ['Mentions légales', '/mentions-legales'],
-                ['Confidentialité', '/politique-confidentialite'],
-              ].map(([label, href]) => (
-                <li key={href}>
-                  <Link href={href} className="text-sm text-slate-400 hover:text-white transition-colors flex items-center gap-1 group">
-                    <ArrowRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity text-brand-400" />
-                    {label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+            <h3 className="mb-4 text-sm font-semibold text-white">
+              Entreprise
+            </h3>
+
+            <FooterLinkList links={companyLinks} />
           </div>
         </div>
 
-        {/* Bottom bar */}
-        <div className="py-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-sm text-slate-500">
+        {/* Barre inférieure */}
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white/5 py-6 sm:flex-row">
+          <p className="text-center text-sm text-slate-500">
             © {new Date().getFullYear()} Digiprogtech. Tous droits réservés.
           </p>
-          <div className="flex items-center gap-4">
-            <Link href="/mentions-legales" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Mentions légales</Link>
-            <Link href="/politique-confidentialite" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Confidentialité</Link>
-            <Link href="/cookies" className="text-xs text-slate-500 hover:text-slate-300 transition-colors">Cookies</Link>
+
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/mentions-legales"
+              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+            >
+              Mentions légales
+            </Link>
+
+            <Link
+              href="/politique-confidentialite"
+              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+            >
+              Confidentialité
+            </Link>
+
+            <Link
+              href="/cookies"
+              className="text-xs text-slate-500 transition-colors hover:text-slate-300"
+            >
+              Cookies
+            </Link>
           </div>
         </div>
       </div>

@@ -19,8 +19,8 @@ const valeurs = [
 const expertises = ['Next.js & React', 'TypeScript', 'Node.js & API REST', 'Bases de données (SQL/NoSQL)', 'UI/UX Design (Figma)', 'SEO technique & content', 'Sécurité web (OWASP)', 'Cloud (AWS, Vercel, OVH)', 'CI/CD & DevOps', 'Performance & Core Web Vitals']
 
 const chiffres = [
-  { value: '5+', label: 'Années d\'expérience' },
-  { value: '150+', label: 'Projets livrés' },
+  { value: '3+', label: 'Années d\'expérience' },
+  { value: '5+', label: 'Projets livrés' },
   { value: '98%', label: 'Clients satisfaits' },
   { value: '24h', label: 'Délai de réponse max' },
 ]

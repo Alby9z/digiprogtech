@@ -3,7 +3,7 @@ import { ArrowRight, CheckCircle2, Code2, Palette, Server, Shield, BarChart3, St
 import ServiceCard from '@/components/ui/ServiceCard'
 
 const stats = [
-  { value: '150+', label: 'Projets livrés' },
+  { value: '+5', label: 'Projets livrés' },
   { value: '98%', label: 'Clients satisfaits' },
   { value: '3 ans', label: "D'expertise" },
   { value: '24h', label: 'Support réactif' },
@@ -103,7 +103,7 @@ export default function HomePage() {
                 Obtenir un devis gratuit <ArrowRight size={16} />
               </Link>
               <Link href="/audit" className="inline-flex items-center gap-2 px-8 py-4 glass border border-white/15 hover:border-brand-500/40 text-slate-300 hover:text-white font-semibold rounded-xl transition-all">
-                Audit gratuit de votre site
+                Audit de votre site
               </Link>
             </div>
 
@@ -199,16 +199,21 @@ export default function HomePage() {
                   <span className="text-brand-400">// Impact réel</span>
                 </div>
                 {[
-                  ['Visibilité Google', '+320%'],
-                  ['Taux de conversion', '+180%'],
-                  ['Vitesse de chargement', '×4 plus rapide'],
-                  ['Leads générés', '+250%'],
-                ].map(([label, val]) => (
-                  <div key={label} className="flex items-center justify-between py-3 border-b border-white/5 last:border-0">
-                    <span className="text-sm text-slate-400">{label}</span>
-                    <span className="font-display font-bold text-brand-400">{val}</span>
-                  </div>
-                ))}
+  ['Visibilité Google', 'Suivi des impressions et des clics'],
+  ['Référencement naturel', 'Suivi des positions Google'],
+  ['Performance web', 'Analyse Lighthouse & Core Web Vitals'],
+  ['Sécurité technique', 'Contrôles et recommandations'],
+].map(([label, val]) => (
+  <div
+    key={label}
+    className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 py-4 border-b border-white/5 last:border-0"
+  >
+    <span className="text-sm text-slate-400">{label}</span>
+    <span className="text-sm font-semibold text-brand-400 sm:text-right">
+      {val}
+    </span>
+  </div>
+))}
                 <Link href="/devis" className="mt-6 flex items-center justify-center gap-2 w-full py-3 bg-gradient-to-r from-brand-500 to-brand-600 text-white font-semibold rounded-xl text-sm hover:opacity-90 transition-opacity">
                   Obtenir ces résultats <ArrowRight size={14} />
                 </Link>
@@ -262,7 +267,7 @@ export default function HomePage() {
                   Démarrer mon projet <ArrowRight size={16} />
                 </Link>
                 <Link href="/audit" className="inline-flex items-center gap-2 px-8 py-4 glass border border-white/15 hover:border-brand-500/40 text-slate-300 hover:text-white font-semibold rounded-xl transition-all">
-                  Audit gratuit
+                  Audit 
                 </Link>
               </div>
             </div>

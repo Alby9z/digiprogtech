@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { Code2, Palette, Server, Shield, ChevronDown, Menu, X, ArrowRight } from 'lucide-react'
 import navData from '@/data/navigation.json'
 import clsx from 'clsx'
+import Image from 'next/image'
 
 const iconMap: Record<string, React.ReactNode> = {
   Code2: <Code2 size={16} />,
@@ -54,9 +55,16 @@ export default function Navbar() {
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-500 flex items-center justify-center text-white font-display font-bold text-sm shadow-lg group-hover:scale-105 transition-transform">
-                D
-              </div>
+              <div className="relative h-12 w-12 shrink-0">
+                 <Image
+                   src="/images/realisation/logo.png"
+                   alt="Logo Digiprogtech"
+                   fill
+                   priority
+                   sizes="48px"
+                  className="object-contain"
+                 />
+                </div>
               <span className="font-display font-bold text-xl text-white">
                 Digiprog<span className="text-brand-400">tech</span>
               </span>
@@ -132,7 +140,7 @@ export default function Navbar() {
             {/* Desktop CTA */}
             <div className="hidden lg:flex items-center gap-3">
               <Link href="/audit" className="px-4 py-2 text-sm font-medium text-slate-300 hover:text-white border border-white/15 hover:border-white/30 rounded-lg transition-all">
-                Audit gratuit
+                Audit
               </Link>
               <Link href="/devis" className="px-4 py-2 text-sm font-semibold bg-gradient-to-r from-brand-500 to-brand-600 hover:from-brand-400 hover:to-brand-500 text-white rounded-lg transition-all shadow-lg shadow-brand-500/25 hover:shadow-brand-500/40">
                 Devis gratuit
