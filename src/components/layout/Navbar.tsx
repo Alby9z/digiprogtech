@@ -76,18 +76,27 @@ export default function Navbar() {
                 <div key={link.label} className="relative">
                   {link.submenu ? (
                     <button
-                      onMouseEnter={() => setActiveMenu(link.label)}
-                      onMouseLeave={() => setActiveMenu(null)}
-                      className={clsx(
-                        'flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all',
-                        activeMenu === link.label
-                          ? 'text-white bg-white/10'
-                          : 'text-slate-400 hover:text-white hover:bg-white/5'
-                      )}
-                    >
+                      type="button"
+                      aria-expanded={activeMenu === link.label}
+                      onClick={() =>
+                      setActiveMenu(activeMenu === link.label ? null : link.label)
+                        }
+                     className={clsx(
+                     'flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all',
+                     activeMenu === link.label
+                    ? 'text-white bg-white/10'
+                     : 'text-slate-400 hover:text-white hover:bg-white/5'
+                     )}
+                      >
                       {link.label}
-                      <ChevronDown size={14} className={clsx('transition-transform', activeMenu === link.label && 'rotate-180')} />
-                    </button>
+                     <ChevronDown
+                     size={14}
+                     className={clsx(
+                      'transition-transform',
+                    activeMenu === link.label && 'rotate-180'
+                        )}
+                        />
+                 </button>
                   ) : (
                     <Link
                       href={link.href}
@@ -105,10 +114,7 @@ export default function Navbar() {
                   {/* Mega Menu */}
                   {link.submenu && activeMenu === link.label && (
                     <div
-                      onMouseEnter={() => setActiveMenu(link.label)}
-                      onMouseLeave={() => setActiveMenu(null)}
-                      className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] glass rounded-2xl p-6 shadow-2xl border border-white/10"
-                    >
+                     className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-[820px] bg-[#0b0d14] backdrop-blur-xl rounded-2xl p-6 shadow-2xl border border-white/10"                    >
                       <div className="grid grid-cols-4 gap-6">
                         {link.submenu.map((cat) => (
                           <div key={cat.category}>

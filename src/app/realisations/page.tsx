@@ -44,6 +44,17 @@ const projects = [
     status: 'Projet client',
   },
   {
+  title: 'Chucho',
+  category: 'Site vitrine',
+  description:
+    'Un site vitrine professionnel dédié aux petits travaux, au jardinage, aux espaces verts, à l’aménagement extérieur et au nettoyage.',
+  image: '/images/realisation/chucho.png',
+  alt: 'Aperçu du site Chucho',
+  tags: ['Site vitrine', 'Responsive', 'SEO'],
+  href: 'https://chucho-gamma.vercel.app',
+  status: 'Projet client',
+},
+  {
   title: 'KVC Nuisibles',
   category: 'Site vitrine',
   description:
