@@ -7,8 +7,8 @@ export default function MentionsLegalesPage() {
         <h1 className="font-display font-bold text-4xl text-white mb-10">Mentions Légales</h1>
         <div className="prose prose-invert max-w-none space-y-8">
           {[
-            { title: 'Éditeur du site', content: ['Raison sociale : Digiprogtech','Forme juridique : [À compléter]','Capital social : [À compléter]','Siège social : [Adresse à compléter]','SIRET : [À compléter]','Email : digiprogtech@gmail.com'] },
-            { title: 'Directeur de la publication', content: ['[Nom du dirigeant à compléter]','contact@digiprogtech.fr'] },
+            { title: 'Éditeur du site', content: ['Raison sociale : Digiprogtech','Forme juridique : Entrepreneur individuel','Capital social : [À compléter]','Siège social : 18 rue des blocs pologne 70400 Héricourt','SIRET : 93229676700019','Email : digiprogtech@gmail.com'] },
+            { title: 'Directeur de la publication', content: ['Dias Lukas','contact@digiprogtech.fr'] },
             { title: 'Hébergement', content: ['Hébergeur : Vercel Inc.','340 Pine Street, San Francisco, CA 94104, États-Unis','https://vercel.com'] },
             { title: 'Propriété intellectuelle', content: ['L\'ensemble du contenu de ce site (textes, images, code) est protégé par le droit d\'auteur. Toute reproduction est interdite sans autorisation préalable écrite de Digiprogtech.'] },
             { title: 'Limitation de responsabilité', content: ['Digiprogtech s\'efforce de fournir des informations exactes et à jour, mais ne peut garantir l\'exactitude, la complétude ou l\'actualité des informations diffusées sur le site.'] },

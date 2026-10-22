@@ -25,7 +25,7 @@ export default function ContactPage() {
               <h2 className="font-display font-semibold text-xl text-white">Nos coordonnées</h2>
               {[
                 { icon: <Mail size={18}/>, title: 'Email', value: 'digiprogtech@gmail.com', sub: 'Réponse sous 24h ouvrées' },
-                { icon: <Phone size={18}/>, title: 'Téléphone', value: '+33 6 48 26 35 81', sub: 'Lun–Ven, 9h–18h' },
+                { icon: <Phone size={18}/>, title: 'Téléphone', value: '06-58-95-14-41', sub: 'Lun–Ven, 9h–18h' },
                 { icon: <MapPin size={18}/>, title: 'Zone d\'intervention', value: 'France entière', sub: 'Intervention locale & à distance' },
                 { icon: <Clock size={18}/>, title: 'Horaires', value: 'Lun–Ven : 9h–18h', sub: 'Support urgent disponible' },
               ].map(item => (

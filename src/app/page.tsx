@@ -223,32 +223,35 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+     
+      {/* Avis Google */}
       <section className="py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <h2 className="font-display font-bold text-4xl text-white mb-4">
-              Ce que disent <span className="gradient-text">nos clients</span>
-            </h2>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t) => (
-              <div key={t.name} className="glass rounded-2xl p-6 border border-white/8 hover:border-brand-500/20 transition-colors">
-                <div className="flex items-center gap-1 mb-4">
-                  {Array.from({ length: t.rating }).map((_, i) => (
-                    <Star key={i} size={14} className="text-accent-400 fill-current" />
-                  ))}
-                </div>
-                <p className="text-slate-300 text-sm leading-relaxed mb-6 italic">"{t.content}"</p>
-                <div>
-                  <div className="font-medium text-white text-sm">{t.name}</div>
-                  <div className="text-xs text-slate-500">{t.role}</div>
-                </div>
-              </div>
-            ))}
+          <div className="glass rounded-3xl border border-white/8 p-10 sm:p-14 text-center">
+            <div className="max-w-2xl mx-auto">
+              <h2 className="font-display font-bold text-4xl text-white mb-4">
+                Vos avis nous <span className="gradient-text">font avancer</span>
+              </h2>
+      
+              <p className="text-slate-300 leading-relaxed mb-8">
+                Découvrez les avis et retours de nos clients sur Google
+                et faites-vous votre propre opinion sur Digiprogtech.
+              </p>
+      
+              <a
+                href="https://www.google.com/search?q=Digiprogtech+avis"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-3 rounded-xl bg-brand-500 px-7 py-4 font-semibold text-white transition-all hover:opacity-90"
+              >
+                Consulter les avis Google
+                <span aria-hidden="true">↗</span>
+              </a>
+            </div>
           </div>
         </div>
       </section>
+
 
       {/* CTA */}
       <section className="py-24">
