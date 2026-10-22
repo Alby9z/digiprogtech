@@ -25,6 +25,7 @@ const designLinks = [
   ['Cloud', '/services/cloud'],
 ]
 
+
 const companyLinks = [
   ['Qui sommes-nous', '/qui-sommes-nous'],
   ['Réalisations', '/realisations'],
@@ -33,8 +34,12 @@ const companyLinks = [
   ['Blog', '/blog'],
   ['Contact', '/contact'],
   ['Mentions légales', '/mentions-legales'],
+  ['Conditions générales de vente', '/cgv'],
+  ['Conditions générales d’utilisation', '/cgu'],
   ['Confidentialité', '/politique-confidentialite'],
+  ['Cookies', '/cookies'],
 ]
+
 
 const socialLinks = [
   {
