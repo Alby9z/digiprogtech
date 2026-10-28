@@ -15,42 +15,38 @@ const services = [
     title: 'Développement Web',
     description: 'Sites statiques ultra-rapides ou applications dynamiques complexes, développés avec les dernières technologies.',
     href: '/services/developpement-web',
-    features: ['Next.js & React', 'Performance optimisée', 'SEO natif'],
+    image: '/images/services/developpement-web.webp',
+    imageAlt: 'Technologie et développement web',
   },
   {
     icon: <Palette size={22} />,
     title: 'Design & Graphisme',
     description: 'Interfaces mémorables et identités visuelles percutantes qui convertissent et fidélisent vos visiteurs.',
     href: '/services/design-graphisme',
-    features: ['UI/UX Design', 'Logo & identité', 'Maquettes Figma'],
   },
   {
     icon: <Server size={22} />,
     title: 'Hébergement & Cloud',
     description: 'Infrastructure cloud fiable, scalable et sécurisée pour que votre site soit toujours disponible.',
     href: '/services/hebergement',
-    features: ['Vercel / AWS / OVH', 'CI/CD automatisé', 'Monitoring 24/7'],
   },
   {
     icon: <Shield size={22} />,
     title: 'Sécurité Web',
     description: 'Protection complète contre les menaces : SSL, pare-feu, anti-DDoS et sauvegardes automatisées.',
     href: '/services/securite',
-    features: ['SSL / HTTPS', 'Protection DDoS', 'Sauvegardes auto'],
   },
   {
     icon: <BarChart3 size={22} />,
     title: 'Audit de Site Web',
     description: 'Analyse complète SEO, performance, sécurité et UX avec rapport détaillé et plan d\'action priorisé.',
     href: '/audit',
-    features: ['Audit SEO complet', 'Core Web Vitals', 'Rapport actionnable'],
   },
   {
     icon: <TrendingUp size={22} />,
     title: 'Optimisation & Refonte',
     description: 'Boostez votre site existant : vitesse, conversions, référencement et expérience utilisateur.',
     href: '/services/optimisation',
-    features: ['Core Web Vitals', '+150% de conversions', 'Refonte complète'],
   },
 ]
 
@@ -150,11 +146,28 @@ export default function HomePage() {
               De la conception à la mise en ligne, nous couvrons l'ensemble de vos besoins digitaux avec expertise et passion.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s) => (
-              <ServiceCard key={s.href} {...s} />
-            ))}
-          </div>
+          
+<div className="grid grid-cols-1 items-stretch gap-5 sm:grid-cols-2 lg:grid-cols-12 lg:gap-5">
+  {services.map((s, index) => {
+    const layouts = [
+      'lg:col-span-6',
+      'lg:col-span-3',
+      'lg:col-span-3',
+      'lg:col-span-3',
+      'lg:col-span-3',
+      'lg:col-span-6',
+    ]
+
+    return (
+      <ServiceCard
+        key={s.href}
+        {...s}
+        className={layouts[index]}
+      />
+    )
+  })}
+</div>
+
         </div>
       </section>
 

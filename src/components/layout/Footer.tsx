@@ -7,6 +7,7 @@ import {
   Linkedin,
   Github,
   ArrowRight,
+  Facebook,
 } from 'lucide-react'
 import Image from 'next/image'
 
@@ -42,6 +43,11 @@ const companyLinks = [
 
 
 const socialLinks = [
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/digiprogtech/',
+    Icon: Facebook,
+  },
   {
     label: 'Instagram',
     href: 'https://www.instagram.com/digiprogtech/',

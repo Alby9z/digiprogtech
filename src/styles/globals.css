@@ -73,3 +73,100 @@ body {
     linear-gradient(90deg, rgba(59,99,247,0.05) 1px, transparent 1px);
   background-size: 60px 60px;
 }
+
+/* =========================================
+   CUSTOM CURSOR — ELECTRIC BLUE
+   ========================================= */
+
+.custom-cursor-system {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.cursor-trail {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+  opacity: 0;
+  will-change: transform, opacity;
+  transition:
+    opacity 160ms ease,
+    width 200ms ease,
+    height 200ms ease,
+    border-color 200ms ease,
+    background-color 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.cursor-dot {
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  z-index: 2;
+  background: #7dd3fc;
+  box-shadow:
+    0 0 7px #38bdf8,
+    0 0 16px rgba(56, 189, 248, 0.65);
+}
+
+.cursor-ring {
+  width: 31px;
+  height: 31px;
+  margin: -15.5px 0 0 -15.5px;
+  z-index: 1;
+  border: 1px solid rgba(56, 189, 248, 0.65);
+  background: rgba(56, 189, 248, 0.035);
+  box-shadow:
+    0 0 12px rgba(56, 189, 248, 0.12),
+    inset 0 0 8px rgba(56, 189, 248, 0.04);
+}
+
+.cursor-dot.is-visible,
+.cursor-ring.is-visible {
+  opacity: 1;
+}
+
+.cursor-ring.is-hovering {
+  width: 43px;
+  height: 43px;
+  margin: -21.5px 0 0 -21.5px;
+  border-color: rgba(125, 211, 252, 0.95);
+  background: rgba(56, 189, 248, 0.08);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.2);
+}
+
+/* Le curseur natif reste disponible par défaut. */
+@media (hover: hover) and (pointer: fine) and
+  (prefers-reduced-motion: no-preference) {
+  body.cursor-enabled,
+  body.cursor-enabled a,
+  body.cursor-enabled button,
+  body.cursor-enabled input,
+  body.cursor-enabled select,
+  body.cursor-enabled textarea,
+  body.cursor-enabled label,
+  body.cursor-enabled [role="button"],
+  body.cursor-enabled [data-cursor-hover] {
+    cursor: none;
+  }
+}
+
+/* Sécurité supplémentaire pour les écrans tactiles. */
+@media (hover: none), (pointer: coarse),
+  (prefers-reduced-motion: reduce) {
+  .custom-cursor-system {
+    display: none;
+  }
+}
